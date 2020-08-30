@@ -3,24 +3,51 @@
     "name": "",
     "description": "",
     "forks": "",
-    "updated": ""
+    "updated": "",
+    "contributor1": {},
+    "contributor2": {}
   },
   {
     "name": "SampleRepo1",
     "description": "This repository is meant to be a sample",
     "forks": "5",
-    "updated": "2020-05-27 12:00:00"
+    "updated": "2020-05-27 12:00:00",
+    "contributor1": {
+      "name": "NoerGitKat",
+      "img": "https://avatars1.githubusercontent.com/u/13186712?s=400&u=37b2314606d88617b57f5068bbc5d942805c30d8&v=4"
+    },
+    "contributor2": {
+      "name": "wouterkleijn",
+      "img": "https://avatars1.githubusercontent.com/u/37488847?s=400&u=1bb2e059d032f8b525602b92f6e830462e7b3928&v=4"
+    }
   },
+
   {
     "name": "AndAnotherOne",
     "description": "Another sample repo! Can you believe it?",
     "forks": "9",
-    "updated": "2020-05-27 12:00:00"
+    "updated": "2020-05-27 12:00:00",
+    "contributor1": {
+      "name": "mkruijt",
+      "img": "https://avatars1.githubusercontent.com/u/7113309?s=400&u=0e5f1a5dff88df1a801432c9c7b7d817a94e533a&v=4"
+    },
+    "contributor2": {
+      "name": "gijscor",
+      "img": "https://avatars3.githubusercontent.com/u/15912395?s=400&u=f655a4e7c2159c4e0569565e1ec450861989214d&v=4"
+    }
   },
   {
     "name": "HYF-Is-The-Best",
     "description": "This repository contains all things HackYourFuture. That's because HYF is amazing!!!!",
     "forks": "130",
-    "updated": "2020-05-27 12:00:00"
+    "updated": "2020-05-27 12:00:00",
+    "contributor1": {
+      "name": "Tjebbee",
+      "img": "https://avatars0.githubusercontent.com/u/33282467?s=400&v=4"
+    },
+    "contributor2": {
+      "name": "remarcmij",
+      "img": "https://avatars1.githubusercontent.com/u/2788771?s=400&u=1cb41cf65baf8fd8e1ec19b38e316a45c836dbfc&v=4"
+    }
   }
 ]

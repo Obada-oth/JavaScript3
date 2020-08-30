@@ -60,6 +60,9 @@ main {
   margin-top: 2px;
   height: auto;
 }
+.cont-img {
+  margin-right: 40px;
+}
 .main-content {
   border: solid 1px gray;
   box-shadow: 5px 5px 5px gray;
