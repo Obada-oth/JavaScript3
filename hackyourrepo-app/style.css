@@ -71,6 +71,10 @@ main {
   line-height: 1.5rem;
   border-radius: 5px;
 }
+.table {
+  overflow-x: auto;
+}
+
 ul {
   list-style: none;
 }
@@ -89,8 +93,13 @@ td {
   height: 30px;
 }
 @media all and (max-width: 899px) {
+  .select {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .details {
     width: 100%;
+    font-size: 0.7rem;
   }
 
   .contributors {

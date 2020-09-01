@@ -18,7 +18,8 @@ function getDetails(event) {
         options[i].value = '';
 
         options[i].value +=
-          '<table>' +
+          '<div class="table">' +
+          '<table >' +
           '<tr>' +
           '<td class="titles"> Repository: </td>' +
           '<td class="content">' +
@@ -45,7 +46,8 @@ function getDetails(event) {
           repos[i].updated +
           '</td>' +
           '</tr>' +
-          '</table>';
+          '</table>' +
+          '</div>';
         repoDetails.innerHTML = event.target.value;
       }
     }
