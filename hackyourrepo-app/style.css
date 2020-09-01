@@ -88,3 +88,12 @@ li.h3 {
 td {
   height: 30px;
 }
+@media all and (max-width: 899px) {
+  .details {
+    width: 100%;
+  }
+
+  .contributors {
+    width: 100%;
+  }
+}
