@@ -122,3 +122,11 @@ td {
     width: 100%;
   }
 }
+.error {
+  margin-top: 0.3rem;
+  background-color: pink;
+  width: 100%;
+  text-align: center;
+  padding: 1.7rem;
+  color: darkred;
+}

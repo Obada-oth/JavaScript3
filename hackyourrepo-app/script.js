@@ -29,6 +29,7 @@ function main() {
   repoDetailsSection.className = 'main-content';
   const repoDetailsDiv = document.createElement('div');
   repoDetailsDiv.id = 'details';
+  repoDetailsDiv.innerHTML = `<h3> Select a repo to see more details</h3>`;
   repoDetailsSection.appendChild(repoDetailsDiv);
   repoDetails.appendChild(repoDetailsSection);
   main.appendChild(repoDetails);
@@ -56,7 +57,11 @@ function main() {
     xhr.onload = () => {
       if (xhr.status === 200) {
         const repos = JSON.parse(xhr.responseText);
-
+        const choosPrompt = document.createElement('option');
+        choosPrompt.setAttribute('selected', 'selected');
+        choosPrompt.setAttribute('disabled', 'disabled');
+        choosPrompt.innerText = '---Choose a Repo---';
+        selectRepo.appendChild(choosPrompt);
         repos.forEach(repo => {
           const option = document.createElement('option');
           option.innerText = repo.name;
@@ -64,10 +69,17 @@ function main() {
 
           selectRepo.appendChild(option);
         });
+      } else {
+        main.innerHTML = `
+        
+        <p class="error">Network request failed</p>
+        `;
+        selectRepo.style.display = 'none';
       }
     };
     xhr.send();
   }
+
   function getDetails(e) {
     const xhr = new XMLHttpRequest();
     const repoName = e.target.value;
@@ -110,6 +122,11 @@ function main() {
         
         `;
         repoDetailsDiv.innerHTML = repoInformation;
+      } else {
+        repoDetailsDiv.innerHTML = `
+        
+        <p class="error">Network request failed</p>
+        `;
       }
     };
 
@@ -119,6 +136,7 @@ function main() {
   function getContributors(e) {
     const xhr = new XMLHttpRequest();
     const repoName = e.target.value;
+
     const url = `https://api.github.com/repos/HackYourFuture/${repoName}/contributors`;
     xhr.open('GET', url);
     xhr.onload = () => {
@@ -144,12 +162,19 @@ function main() {
           `;
           contributorsOutput.innerHTML = output;
         });
+      } else {
+        contributorsOutput.innerHTML = `
+        
+        <p class="error">Network request failed</p>
+        `;
       }
     };
     xhr.send();
   }
-  selectRepo.addEventListener('change', getDetails);
-  selectRepo.addEventListener('change', getContributors);
+
+  selectRepo.addEventListener('input', getDetails);
+
+  selectRepo.addEventListener('input', getContributors);
   getRepos();
 }
 window.addEventListener('load', main);
