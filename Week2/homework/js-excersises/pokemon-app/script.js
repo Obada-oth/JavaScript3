@@ -7,6 +7,8 @@ function main() {
   document.body.appendChild(div2);
   document.body.appendChild(div3);
   div1.appendChild(getPokemonsBtn);
+  const select = document.createElement('select');
+  div2.appendChild(select);
 
   getPokemonsBtn.innerText = 'Get Pokemons!';
   getPokemonsBtn.addEventListener('click', fetchData);
@@ -26,16 +28,12 @@ function main() {
           pokemonList += `
             
             <option value='${pokemon.url}' class='option'> ${pokemon.name}</option>
-            
 
-            
-            
             `;
         });
 
-        div2.innerHTML = `<select id="select">${pokemonList}</select>`;
-        const select = document.getElementById('select');
-        div2.appendChild(select);
+        select.innerHTML = pokemonList;
+
         select.addEventListener('change', fetchPokemonImg);
       });
   }
