@@ -1,3 +1,132 @@
 /* 
   Write here your CSS rules for HackYourRepo!
 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 70%;
+  margin: 0 auto;
+  font-family: 'Roboto';
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  border-radius: 2px;
+
+  background-color: #3f51b5;
+  height: 60px;
+  color: white;
+}
+label {
+  margin: auto 2rem;
+  width: auto;
+}
+.select {
+  display: flex;
+  justify-content: start;
+  margin: auto 1rem;
+}
+#select-repo {
+  padding: 0.6rem;
+  border-radius: 5px;
+  width: 100%;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.details {
+  width: 50%;
+}
+
+.contributors {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+#contributors {
+  width: 100%;
+
+  color: darkgray;
+  padding-top: 0;
+}
+#contributors-list {
+  width: 100%;
+  margin-top: 2px;
+  height: auto;
+}
+
+.main-content {
+  border: solid 1px gray;
+  box-shadow: 5px 5px 5px gray;
+  margin: 0.2rem;
+  padding: 0.9rem;
+  line-height: 1.5rem;
+  border-radius: 5px;
+}
+.table {
+  overflow-x: auto;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+}
+.cont {
+  display: flex;
+}
+.cont-img {
+  margin-right: 1rem;
+  width: 40px;
+}
+.cont-count {
+  background-color: darkgray;
+  padding: 0.1rem 0.8rem;
+  border-radius: 5px;
+  color: white;
+}
+
+li p {
+  font-weight: bold;
+}
+.titles {
+  font-weight: bold;
+  vertical-align: top;
+}
+.content {
+  padding-left: 5rem;
+  vertical-align: top;
+}
+td {
+  height: 30px;
+}
+@media all and (max-width: 899px) {
+  .select {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .details {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+
+  .contributors {
+    width: 100%;
+  }
+}
+.error {
+  margin-top: 0.3rem;
+  background-color: pink;
+  width: 100%;
+  text-align: center;
+  padding: 1.7rem;
+  color: darkred;
+}
