@@ -1,3 +1,4 @@
+'use strict';
 export const createUI = () => {
   const header = document.createElement('header');
   header.style.backgroundColor = 'blue';
@@ -42,6 +43,10 @@ export const createUI = () => {
   contributorsSection.appendChild(h3);
 
   const contributorsOutput = document.createElement('section');
+  const pageBtnsDiv = document.createElement('div');
+  pageBtnsDiv.id = 'page-btn-div';
+  pageBtnsDiv.classList.add('page-numbers');
+  contributorsWrapper.appendChild(pageBtnsDiv);
   contributorsOutput.id = 'contributors-list';
   contributorsWrapper.appendChild(contributorsOutput);
   return {

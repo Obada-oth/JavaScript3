@@ -1,3 +1,4 @@
+'use strict';
 export const getRepos = async UItemplate => {
   try {
     let response = await fetch(

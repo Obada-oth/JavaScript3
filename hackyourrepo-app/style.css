@@ -55,6 +55,9 @@ main {
   color: darkgray;
   padding-top: 0;
 }
+.page-btn {
+  padding: 0.7rem;
+}
 #contributors-list {
   width: 100%;
   margin-top: 2px;
@@ -72,13 +75,36 @@ main {
 .table {
   overflow-x: auto;
 }
-
-ul {
-  list-style: none;
+.page-numbers {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+}
+button {
+  padding: 0.3rem 0.7rem;
+  color: white;
+  background-color: darkgray;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  margin: 0.2rem;
+}
+button:hover {
+  cursor: pointer;
+  background-color: darkslateblue;
+}
+button.active {
+  background-color: darkslateblue;
 }
 li {
   display: flex;
   justify-content: space-between;
+  margin: 0.2rem 0.4rem;
+  padding: 0.7rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px gray;
+  border: solid 1px gray;
 }
 .cont {
   display: flex;

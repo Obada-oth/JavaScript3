@@ -1,3 +1,4 @@
+'use strict';
 export const getDetails = async e => {
   try {
     let response = await fetch(
