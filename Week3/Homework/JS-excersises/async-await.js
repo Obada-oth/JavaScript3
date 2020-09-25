@@ -12,10 +12,15 @@ async function getDataAsync(url) {
   try {
     let response = await fetch(url);
     let data = await response.json();
-    console.log(data);
+    appendImg(data);
   } catch (error) {
     console.log(error, 'Error!!');
   }
+}
+function appendImg(data) {
+  const img = document.createElement('img');
+  img.src = data.image;
+  document.body.appendChild(img);
 }
 getDataAsync('https://randomfox.ca/floof/');
 
