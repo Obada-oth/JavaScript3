@@ -14,7 +14,7 @@ async function getDataAsync(url) {
     let data = await response.json();
     appendImg(data);
   } catch (error) {
-    console.log(error, 'Error!!');
+    console.error(error);
   }
 }
 function appendImg(data) {
