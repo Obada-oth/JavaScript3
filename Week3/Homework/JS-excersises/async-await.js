@@ -22,7 +22,7 @@ function appendImg(data) {
   img.src = data.image;
   document.body.appendChild(img);
 }
-getDataAsync('https://randomfox.cssa/floof/');
+getDataAsync('https://randomfox.ca/floof/');
 
 // Exercise B
 const arrayOfWords = ['cucumber', 'tomatos', 'avocado'];
