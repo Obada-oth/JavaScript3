@@ -14,7 +14,7 @@ async function getDataAsync(url) {
     let data = await response.json();
     appendImg(data);
   } catch (error) {
-    console.log(error, 'Error!!');
+    console.error(error);
   }
 }
 function appendImg(data) {
@@ -22,7 +22,7 @@ function appendImg(data) {
   img.src = data.image;
   document.body.appendChild(img);
 }
-getDataAsync('https://randomfox.ca/floof/');
+getDataAsync('https://randomfox.cssa/floof/');
 
 // Exercise B
 const arrayOfWords = ['cucumber', 'tomatos', 'avocado'];

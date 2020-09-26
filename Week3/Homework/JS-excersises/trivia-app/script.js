@@ -17,11 +17,11 @@ const getNewQuestions = document.createElement('button');
 getNewQuestions.innerText = 'Click me to get a new set of questions!';
 getNewQuestions.className = 'get-more-questions';
 document.body.appendChild(getNewQuestions);
-getNewQuestions.addEventListener('click', refreshPage);
 
-function refreshPage() {
-  location.reload();
-}
+getNewQuestions.addEventListener('click', () => {
+  wrapper.innerHTML = '';
+  getTrivia(url);
+});
 
 async function getTrivia(url) {
   let response = await fetch(url);
@@ -32,17 +32,12 @@ async function getTrivia(url) {
     questionBtn.className = 'question';
     wrapper.appendChild(questionBtn);
     questionBtn.style.display = 'block';
-    questionBtn.innerText = triviaQuestion.question
-      .replace(/&quot;/g, '"')
-      .replace(/&#039;/g, "'")
-      .replace(/&Eacute;/g, 'é');
+    questionBtn.innerText = unescaped(triviaQuestion.question);
+
     const answerDiv = document.createElement('div');
     answerDiv.className = 'answer';
     wrapper.appendChild(answerDiv);
-    answerDiv.innerText = triviaQuestion.correct_answer
-      .replace(/&quot;/g, '"')
-      .replace(/&#039;/g, "'")
-      .replace(/&Eacute;/g, 'é');
+    answerDiv.innerText = unescaped(triviaQuestion.correct_answer);
 
     answerDiv.style.display = 'none';
     questionBtn.addEventListener('click', () => {
@@ -53,6 +48,11 @@ async function getTrivia(url) {
       }
     });
   });
+}
+
+function unescaped(text) {
+  var doc = new DOMParser().parseFromString(text, 'text/html');
+  return doc.documentElement.textContent;
 }
 
 getTrivia(url);
